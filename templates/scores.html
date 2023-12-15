@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}User Scores{% endblock %}
+
+{% block body %}
+  <h1>Welcome, {{ current_user.email }}!</h1>
+  
+  <h2>Your Scores:</h2>
+  <p>Wins: {{ user_wins }}</p>
+  <p>Losses: {{ user_losses }}</p>
+  <p>Draws: {{ user_draws }}</p>
+{% endblock %}

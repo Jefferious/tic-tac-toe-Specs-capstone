@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Update User Stats{% endblock %}
+
+{% block body %}
+  <h1>Update User Stats</h1>
+
+  <form method="post" action="/update" enctype="multipart/form-data">
+    <label for="wins">Wins:</label>
+    <input type="number" id="wins" name="wins" value="{{ current_user.wins }}" required>
+
+    <label for="losses">Losses:</label>
+    <input type="number" id="losses" name="losses" value="{{ current_user.losses }}" required>
+
+    <label for="draws">Draws:</label>
+    <input type="number" id="draws" name="draws" value="{{ current_user.draws }}" required>
+
+    <button type="submit">Update Stats</button>
+  </form>
+{% endblock %}
